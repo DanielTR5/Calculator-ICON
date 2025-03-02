@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramientas informáticas gratuitas por ICON Tecnology">
+    <title>Herramientas Informáticas | ICON Tecnology</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-xyz789' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: assets/;">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo-container">
+            <img src="assets/img/1.png" alt="ICON Tecnology Logo" class="header__logo-img" loading="lazy">
+        </div>
+        <h1 class="header__title">
+            Herramientas Informáticas 
+            <img src="assets/icons/tools.svg" alt="Tools" class="header__icon">
+        </h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Anuncio Lateral -->
+        <aside class="ad-section" aria-label="Publicidad">
+            <div class="ad-section__top">
+                <img src="assets/icons/anuncio.svg" alt="Anuncio" class="ad-section__icon">
+            </div>
+            <h2 class="ad-section__title">Pinturas Julio Alberto Torres | Cazalegas</h2>
+            <img src="assets/img/logopapa.png" alt="Anuncio" class="ad-section__image">
+            <p class="ad-section__text">¡Transforma tu espacio con los mejores colores y acabados!</p>
+            <div class="ad-section__links">
+                <a href="" target="_blank" class="ad-section__link">
+                    <img src="assets/icons/globe.svg" alt="PaginaWeb" class="ad-icon"> PinturasJulioAlberto.com
+                </a>
+                <a href="https://www.facebook.com/share/12HRGoK1GVp/?mibextid=wwXIfr" target="_blank" class="ad-section__link">
+                    <img src="assets/icons/facebook.svg" alt="Facebook" class="ad-icon"> Facebook
+                </a>
+                <a href="https://www.instagram.com/pinturajulioa.torres?igsh=MWs0ZXl6MnRyZnJ0Yg%3D%3D&utm_source=qr" target="_blank" class="ad-section__link">
+                    <img src="assets/icons/instagram.svg" alt="Instagram" class="ad-icon"> Instagram
+                </a>
+            </div>
+        </aside>
+
+        <!-- Sección de Herramientas -->
+        <section class="container">
+            <div class="tool-wheel" id="tool-wheel">
+                <div class="wheel-center" id="wheel-center">
+                    <p>Herramientas:</p>
+                </div>
+                <div class="wheel-item" data-tool="calculator" style="--angle: 0deg;">
+                    <img src="assets/icons/calculadora.svg" alt="Calculadora" class="wheel-icon">
+                    <span class="wheel-title">Calc</span>
+                </div>
+                <div class="wheel-item" data-tool="temperature" style="--angle: 60deg;">
+                    <img src="assets/icons/temperatura.svg" alt="Temperatura" class="wheel-icon">
+                    <span class="wheel-title">Temp</span>
+                </div>
+                <div class="wheel-item" data-tool="password" style="--angle: 120deg;">
+                    <img src="assets/icons/contraseña.svg" alt="Contraseña" class="wheel-icon">
+                    <span class="wheel-title">Pass</span>
+                </div>
+                <div class="wheel-item" data-tool="length" style="--angle: 180deg;">
+                    <img src="assets/icons/kilometros.svg" alt="Longitud" class="wheel-icon">
+                    <span class="wheel-title">Dist</span>
+                </div>
+                <div class="wheel-item" data-tool="weight" style="--angle: 240deg;">
+                    <img src="assets/icons/peso.svg" alt="Peso" class="wheel-icon">
+                    <span class="wheel-title">Peso</span>
+                </div>
+                <div class="wheel-item" data-tool="counter" style="--angle: 300deg;">
+                    <img src="assets/icons/texto.svg" alt="Texto" class="wheel-icon">
+                    <span class="wheel-title">Text</span>
+                </div>
+            </div>
+
+            <div class="tool-content-wrapper" id="tool-content-wrapper">
+                <div class="tool-content" id="calculator-content" style="display: none;">
+                    <h2 class="tool__title"><img src="assets/icons/calculadora.svg" alt="Calculadora" class="tool-icon"> Calculadora Básica</h2>
+                    <input type="text" id="calc-display" class="tool__input" disabled placeholder="0" aria-label="Pantalla de calculadora">
+                    <div class="tool__buttons">
+                        <button data-action="clear">C</button>
+                        <button data-value="/">/</button>
+                        <button data-value="*">*</button>
+                        <button data-action="backspace">⌫</button>
+                        <button data-value="7">7</button>
+                        <button data-value="8">8</button>
+                        <button data-value="9">9</button>
+                        <button data-value="+">+</button>
+                        <button data-value="4">4</button>
+                        <button data-value="5">5</button>
+                        <button data-value="6">6</button>
+                        <button data-value="-">-</button>
+                        <button data-value="1">1</button>
+                        <button data-value="2">2</button>
+                        <button data-value="3">3</button>
+                        <button data-value=".">.</button>
+                        <button data-value="0">0</button>
+                        <button data-action="percentage">%</button>
+                        <button data-action="calculate" class="tool__equals">=</button>
+                    </div>
+                    <aside class="tool__history">
+                        <h3>Historial</h3>
+                        <ul id="calc-history" class="tool__history-list"></ul>
+                        <button data-action="clearHistory">Limpiar Historial</button>
+                    </aside>
+                </div>
+
+                <div class="tool-content" id="temperature-content" style="display: none;">
+                    <h2 class="tool__title"><img src="assets/icons/temperatura.svg" alt="Temperatura" class="tool-icon"> Conversor térmico</h2>
+                    <div class="tool__input-group">
+                        <label for="temp-input">Temperatura:</label>
+                        <input type="number" id="temp-input" placeholder="Ej: 25.5" step="0.1" aria-label="Ingrese temperatura">
+                    </div>
+                    <div class="tool__input-group">
+                        <label for="temp-unit">Unidad:</label>
+                        <select id="temp-unit" aria-label="Unidad de temperatura">
+                            <option value="celsius">Celsius → Fahrenheit</option>
+                            <option value="fahrenheit">Fahrenheit → Celsius</option>
+                        </select>
+                    </div>
+                    <button data-action="convertTemp">Convertir</button>
+                    <div class="tool__result">
+                        <p id="temp-result" aria-live="polite">Resultado aparecerá aquí</p>
+                    </div>
+                </div>
+
+                <div class="tool-content" id="password-content" style="display: none;">
+                    <h2 class="tool__title"><img src="assets/icons/contraseña.svg" alt="Contraseña" class="tool-icon"> Creador de Claves</h2>
+                    <div class="tool__input-group">
+                        <label for="pass-length">Longitud (6-20):</label>
+                        <input type="number" id="pass-length" min="6" max="20" value="12" aria-label="Longitud de contraseña">
+                    </div>
+                    <button data-action="generatePass">Generar</button>
+                    <div class="tool__result">
+                        <p id="pass-result" aria-live="polite">Tu contraseña aparecerá aquí</p>
+                    </div>
+                </div>
+
+                <div class="tool-content" id="length-content" style="display: none;">
+                    <h2 class="tool__title"><img src="assets/icons/kilometros.svg" alt="Longitud" class="tool-icon"> Medidor de Distancias</h2>
+                    <div class="tool__input-group">
+                        <label for="length-input">Valor:</label>
+                        <input type="number" id="length-input" placeholder="Ej: 100" step="0.01" aria-label="Ingrese longitud">
+                    </div>
+                    <div class="tool__input-group">
+                        <label for="length-from">De:</label>
+                        <select id="length-from" aria-label="Unidad de origen">
+                            <option value="m">Metros (m)</option>
+                            <option value="cm">Centímetros (cm)</option>
+                            <option value="mm">Milímetros (mm)</option>
+                            <option value="km">Kilómetros (km)</option>
+                            <option value="ft">Pies (ft)</option>
+                            <option value="in">Pulgadas (in)</option>
+                            <option value="yd">Yardas (yd)</option>
+                        </select>
+                    </div>
+                    <div class="tool__input-group">
+                        <label for="length-to">A:</label>
+                        <select id="length-to" aria-label="Unidad de destino">
+                            <option value="m">Metros (m)</option>
+                            <option value="cm">Centímetros (cm)</option>
+                            <option value="mm">Milímetros (mm)</option>
+                            <option value="km">Kilómetros (km)</option>
+                            <option value="ft">Pies (ft)</option>
+                            <option value="in">Pulgadas (in)</option>
+                            <option value="yd">Yardas (yd)</option>
+                        </select>
+                    </div>
+                    <button data-action="convertLength">Convertir</button>
+                    <div class="tool__result">
+                        <p id="length-result" aria-live="polite">Resultado aparecerá aquí</p>
+                    </div>
+                </div>
+
+                <div class="tool-content" id="weight-content" style="display: none;">
+                    <h2 class="tool__title"><img src="assets/icons/peso.svg" alt="Peso" class="tool-icon"> Conversor de Masas</h2>
+                    <div class="tool__input-group">
+                        <label for="weight-input">Valor:</label>
+                        <input type="number" id="weight-input" placeholder="Ej: 1.5" step="0.01" aria-label="Ingrese peso">
+                    </div>
+                    <div class="tool__input-group">
+                        <label for="weight-from">De:</label>
+                        <select id="weight-from" aria-label="Unidad de origen">
+                            <option value="kg">Kilogramos (kg)</option>
+                            <option value="g">Gramos (g)</option>
+                            <option value="mg">Miligramos (mg)</option>
+                            <option value="t">Toneladas (t)</option>
+                            <option value="lb">Libras (lb)</option>
+                            <option value="oz">Onzas (oz)</option>
+                        </select>
+                    </div>
+                    <div class="tool__input-group">
+                        <label for="weight-to">A:</label>
+                        <select id="weight-to" aria-label="Unidad de destino">
+                            <option value="kg">Kilogramos (kg)</option>
+                            <option value="g">Gramos (g)</option>
+                            <option value="mg">Miligramos (mg)</option>
+                            <option value="t">Toneladas (t)</option>
+                            <option value="lb">Libras (lb)</option>
+                            <option value="oz">Onzas (oz)</option>
+                        </select>
+                    </div>
+                    <button data-action="convertWeight">Convertir</button>
+                    <div class="tool__result">
+                        <p id="weight-result" aria-live="polite">Resultado aparecerá aquí</p>
+                    </div>
+                </div>
+
+                <div class="tool-content" id="counter-content" style="display: none;">
+                    <h2 class="tool__title"><img src="assets/icons/texto.svg" alt="Texto" class="tool-icon"> Analizador de Texto</h2>
+                    <div class="tool__input-group">
+                        <label for="text-input">Texto:</label>
+                        <textarea id="text-input" placeholder="Escribe aquí..." rows="4" aria-label="Ingrese texto para contar"></textarea>
+                    </div>
+                    <button data-action="countText">Contar</button>
+                    <div class="tool__result">
+                        <p id="text-result" aria-live="polite">Caracteres: 0 | Palabras: 0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 ICON Tecnology - Todos los derechos reservados.</p>
+        <nav class="footer__social">
+            <a href="https://icontecnology.com" target="_blank" aria-label="ICON Tecnology">
+                <img src="assets/img/1.png" alt="ICON Tecnology" class="footer__logo">
+            </a>
+            <a href="https://github.com/DanielTR5" target="_blank" aria-label="GitHub">
+                <img src="assets/icons/github.svg" alt="GitHub" class="footer__icon">
+            </a>
+        </nav>
+    </footer>
+
+    <script src="assets/js/script.js" nonce=""></script>
+</html>
